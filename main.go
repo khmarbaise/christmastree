@@ -7,9 +7,10 @@ package main // import "code.gitea.io/christmastree"
 
 import (
 	"fmt"
-	"github.com/khmarbaise/christmastree/cmd"
 	"os"
 	"strings"
+
+	"github.com/khmarbaise/christmastree/cmd"
 
 	"github.com/urfave/cli/v2"
 )
