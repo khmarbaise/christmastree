@@ -2,32 +2,54 @@ package modules
 
 import "testing"
 
+/*
+    *
+   ***
+  *****
+ *******
+*********
+*/
 func TestTreeOutput(t *testing.T) {
-	type args struct {
+	type fArgs struct {
 		numberOfLines int
 	}
 	tests := []struct {
 		name     string
-		args     args
+		args     fArgs
 		expected string
 	}{
 		{
 			name:     "First Test",
-			args:     args{numberOfLines: 1},
+			args:     fArgs{numberOfLines: 1},
 			expected: "*",
 		},
 		{
 			name: "Second Test",
-			args: args{numberOfLines: 2},
-			expected: "*\n" +
-				" ** ",
+			args: fArgs{numberOfLines: 2},
+			expected: " *\n" +
+				"***",
+		},
+		{
+			name: "Third Test",
+			args: fArgs{numberOfLines: 3},
+			expected: "  *\n" +
+				" ***\n" +
+				"*****",
+		},
+		{
+			name: "Forth Test",
+			args: fArgs{numberOfLines: 4},
+			expected: "   *\n" +
+				"  ***\n" +
+				" *****\n" +
+				"*******",
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 
 			if result := TreeOutput(tt.args.numberOfLines); result != tt.expected {
-				t.Errorf("TreeOutput() error = %v, expected %v", result, tt.expected)
+				t.Errorf("TreeOutput() error = %v, expected '%v'", result, tt.expected)
 			}
 		})
 	}
