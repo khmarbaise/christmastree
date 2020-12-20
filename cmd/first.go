@@ -2,6 +2,7 @@ package cmd
 
 import "github.com/urfave/cli/v2"
 
+//CmdPulls is test command.
 var CmdPulls = cli.Command{
 	Name:        "pulls",
 	Aliases:     []string{"pull", "pr"},
