@@ -3,11 +3,12 @@ package modules
 import "testing"
 
 /*
-    *
-   ***
-  *****
- *******
-*********
+     *
+    ***
+   *****
+  *******
+ *********
+***********
 */
 func TestTreeOutput(t *testing.T) {
 	type fArgs struct {
@@ -43,6 +44,15 @@ func TestTreeOutput(t *testing.T) {
 				"  ***\n" +
 				" *****\n" +
 				"*******",
+		},
+		{
+			name: "Fivth Test",
+			args: fArgs{numberOfLines: 5},
+			expected: "    *\n" +
+				"   ***\n" +
+				"  *****\n" +
+				" *******\n" +
+				"*********",
 		},
 	}
 	for _, tt := range tests {

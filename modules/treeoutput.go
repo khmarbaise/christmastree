@@ -6,7 +6,8 @@ import "fmt"
 func TreeOutput(numberOfLines int) (tree string) {
 	switch numberOfLines {
 	case 1:
-		tree = "*"
+		tree =
+			"*"
 	case 2:
 		tree =
 			" *\n" +
@@ -22,6 +23,13 @@ func TreeOutput(numberOfLines int) (tree string) {
 				"  ***\n" +
 				" *****\n" +
 				"*******"
+	case 5:
+		tree =
+			"    *\n" +
+				"   ***\n" +
+				"  *****\n" +
+				" *******\n" +
+				"*********"
 	default:
 		fmt.Errorf("Unknown numberOfLines given. %d", numberOfLines)
 	}
