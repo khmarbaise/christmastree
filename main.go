@@ -27,7 +27,7 @@ func main() {
 	app.Usage = "Command line tool to interact with Christmastree"
 	app.Version = Version + formatBuiltWith(Tags)
 	app.Commands = []*cli.Command{
-		&cmd.CmdPulls,
+		&cmd.CmdTree,
 	}
 	app.EnableBashCompletion = true
 	err := app.Run(os.Args)
