@@ -10,31 +10,28 @@ func TreeOutput(numberOfLines int) (tree string) {
 
 	switch numberOfLines {
 	case 1:
-		tree = strings.Repeat("*", numberOfLines*2-1)
+		tree = ""
 	case 2:
 		tree =
-			" *\n" +
-				strings.Repeat("*", numberOfLines*2-1)
+			" *\n"
 	case 3:
 		tree =
 			"  *\n" +
-				" ***\n" +
-				strings.Repeat("*", numberOfLines*2-1)
+				" ***\n"
 	case 4:
 		tree =
 			"   *\n" +
 				"  ***\n" +
-				" *****\n" +
-				strings.Repeat("*", numberOfLines*2-1)
+				" *****\n"
 	case 5:
 		tree =
 			"    *\n" +
 				"   ***\n" +
 				"  *****\n" +
-				" *******\n" +
-				strings.Repeat("*", numberOfLines*2-1)
+				" *******\n"
 	default:
 		fmt.Errorf("Unknown numberOfLines given. %d", numberOfLines)
 	}
+	tree += strings.Repeat("*", numberOfLines*2-1)
 	return
 }
