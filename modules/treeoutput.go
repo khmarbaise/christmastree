@@ -19,10 +19,9 @@ func TreeOutput(numberOfLines int) (tree string) {
 			strings.Repeat(" ", numberOfLines-1) + strings.Repeat("*", 1) + "\n" +
 				strings.Repeat(" ", numberOfLines-2) + strings.Repeat("*", 3) + "\n"
 	case 4:
-		tree =
-			strings.Repeat(" ", numberOfLines-1) + strings.Repeat("*", 1) + "\n" +
-				strings.Repeat(" ", numberOfLines-2) + strings.Repeat("*", 3) + "\n" +
-				strings.Repeat(" ", numberOfLines-3) + strings.Repeat("*", 5) + "\n"
+		for i := 1; i < 4; i++ {
+			tree += strings.Repeat(" ", numberOfLines-i) + strings.Repeat("*", (i*2)-1) + "\n"
+		}
 	case 5:
 		tree =
 			strings.Repeat(" ", numberOfLines-1) + strings.Repeat("*", 1) + "\n" +
