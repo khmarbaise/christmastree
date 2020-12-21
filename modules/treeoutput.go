@@ -10,8 +10,7 @@ func TreeOutput(numberOfLines int) (tree string) {
 
 	switch numberOfLines {
 	case 1:
-		tree =
-			strings.Repeat("*", numberOfLines*2-1)
+		tree = strings.Repeat("*", numberOfLines*2-1)
 	case 2:
 		tree =
 			" *\n" +
