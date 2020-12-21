@@ -46,13 +46,23 @@ func TestTreeOutput(t *testing.T) {
 				"*******",
 		},
 		{
-			name: "Fivth Test",
+			name: "Fifth Test",
 			args: fArgs{numberOfLines: 5},
 			expected: "    *\n" +
 				"   ***\n" +
 				"  *****\n" +
 				" *******\n" +
 				"*********",
+		},
+		{
+			name: "Sixth Test",
+			args: fArgs{numberOfLines: 6},
+			expected: "     *\n" +
+				"    ***\n" +
+				"   *****\n" +
+				"  *******\n" +
+				" *********\n" +
+				"***********",
 		},
 	}
 	for _, tt := range tests {
