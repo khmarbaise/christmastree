@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"fmt"
 	"github.com/khmarbaise/christmastree/modules"
 	"github.com/urfave/cli/v2"
 )
@@ -15,6 +16,6 @@ var CmdTree = cli.Command{
 }
 
 func runEmpty(ctx *cli.Context) error {
-	modules.TreeOutput(5)
+	fmt.Printf("%s\n", modules.TreeOutput(5))
 	return nil
 }
