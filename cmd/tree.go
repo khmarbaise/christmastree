@@ -16,7 +16,7 @@ var CmdTree = cli.Command{
 	Flags: []cli.Flag{
 		&cli.IntFlag{Name: numberOfLines, Aliases: []string{"nof"}, Value: 5},
 	},
-	Description: `Print a christmas tree on console with the given high (numberOfLines).`,
+	Description: "Print a christmas tree on console with the given high (numberOfLines).",
 	Action:      runEmpty,
 }
 

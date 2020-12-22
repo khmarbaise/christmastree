@@ -67,7 +67,6 @@ func TestTreeOutput(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-
 			if result := TreeOutput(tt.args.numberOfLines); result != tt.expected {
 				t.Errorf("TreeOutput() error = %v, expected '%v'", result, tt.expected)
 			}
