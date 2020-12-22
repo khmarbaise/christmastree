@@ -21,8 +21,6 @@ var CmdTree = cli.Command{
 }
 
 func runEmpty(ctx *cli.Context) error {
-	var number = ctx.Int(numberOfLines)
-
-	fmt.Printf("%s\n", modules.TreeOutput(number))
+	fmt.Printf("%s\n", modules.TreeOutput(ctx.Int(numberOfLines)))
 	return nil
 }
